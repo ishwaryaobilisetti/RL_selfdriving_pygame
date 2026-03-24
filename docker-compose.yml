@@ -1,0 +1,24 @@
+services:
+  train:
+    build: .
+    image: car-agent
+    volumes:
+      - ./models:/app/models
+      - ./results:/app/results
+    command: python train.py
+
+  evaluate:
+    build: .
+    image: car-agent
+    volumes:
+      - ./models:/app/models
+      - ./results:/app/results
+    command: python evaluate.py
+
+  record:
+    build: .
+    image: car-agent
+    volumes:
+      - ./models:/app/models
+      - ./results:/app/results
+    command: python record_video.py
