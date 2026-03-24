@@ -16,7 +16,7 @@ nosetests.xml
 coverage.xml
 *.cover
 .hypothesis/
-models/
-results/
+# models/
+# results/
 .DS_Store
 .ipynb_checkpoints/
